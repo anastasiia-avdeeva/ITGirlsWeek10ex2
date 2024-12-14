@@ -50,4 +50,41 @@
   &__description {
     min-height: 103px;
   }
+
+  &__control {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__quantity input {
+    width: 100px;
+    border: 1px solid black;
+    text-align: right;
+  }
+
+  &__quantity-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    background-color: black;
+    color: white;
+  }
+
+  &__add-btn {
+    background-color: black;
+    color: white;
+    width: 150px;
+    height: 50px;
+  }
+
+  &__quantity-btn:disabled {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+  }
+
+  &__price--bold {
+    font-weight: bold;
+  }
 }
