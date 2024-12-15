@@ -24,13 +24,15 @@
             illum explicabo soluta!
           </p>
           <p class="card__price">
-            Стоимость: <span class="card__price--bold">1000 руб.</span>
+            Стоимость:
+            <span class="card__price--bold" id="price1">1000 руб.</span>
           </p>
           <div class="card__control">
             <div class="card__quantity">
               <button
                 class="card__quantity-btn card__decrease-btn"
-                id="btn-decrease"
+                id="btn-decrease1"
+                onclick="adjustQuantity('product1-quantity','btn-increase1', 'btn-decrease1', 'decrease')"
                 disabled
               >
                 -
@@ -41,15 +43,18 @@
                 value="1"
                 min="1"
                 max="5"
+                oninput="validateUserInput(this)"
+                onchange="notEmpty(this)"
               />
               <button
                 class="card__quantity-btn card__increase-btn"
-                id="btn-increase"
+                id="btn-increase1"
+                onclick="adjustQuantity('product1-quantity','btn-increase1', 'btn-decrease1', 'increase')"
               >
                 +
               </button>
             </div>
-            <button class="card__add-btn" id="btn-add">Добавить</button>
+            <button class="card__add-btn" id="btn-add1">Добавить</button>
           </div>
         </div>
         <div class="card">
@@ -66,13 +71,15 @@
             atque quos ea! Porro, tenetur dignissimos.
           </p>
           <p class="card__price">
-            Стоимость: <span class="card__price--bold">1200 руб.</span>
+            Стоимость:
+            <span class="card__price--bold" id="price2">1200 руб.</span>
           </p>
           <div class="card__control">
             <div class="card__quantity">
               <button
                 class="card__quantity-btn card__decrease-btn"
-                id="btn-decrease"
+                id="btn-decrease2"
+                onclick="adjustQuantity('product2-quantity','btn-increase2', 'btn-decrease2', 'decrease')"
                 disabled
               >
                 -
@@ -84,15 +91,18 @@
                 value="1"
                 min="1"
                 max="5"
+                oninput="validateUserInput(this)"
+                onchange="notEmpty(this)"
               />
               <button
                 class="card__quantity-btn card__increase-btn"
-                id="btn-increase"
+                id="btn-increase2"
+                onclick="adjustQuantity('product2-quantity','btn-increase2', 'btn-decrease2', 'increase')"
               >
                 +
               </button>
             </div>
-            <button class="card__add-btn" id="btn-add">Добавить</button>
+            <button class="card__add-btn" id="btn-add2">Добавить</button>
           </div>
         </div>
         <div class="card">
@@ -109,13 +119,15 @@
             molestiae!
           </p>
           <p class="card__price">
-            Стоимость: <span class="card__price--bold">1100 руб.</span>
+            Стоимость:
+            <span class="card__price--bold" id="price3">1100 руб.</span>
           </p>
           <div class="card__control">
             <div class="card__quantity">
               <button
                 class="card__quantity-btn card__decrease-btn"
-                id="btn-decrease"
+                id="btn-decrease3"
+                onclick="adjustQuantity('product3-quantity','btn-increase3', 'btn-decrease3', 'decrease')"
                 disabled
               >
                 -
@@ -127,15 +139,18 @@
                 value="1"
                 min="1"
                 max="5"
+                oninput="validateUserInput(this)"
+                onchange="notEmpty(this)"
               />
               <button
                 class="card__quantity-btn card__increase-btn"
-                id="btn-increase"
+                id="btn-increase3"
+                onclick="adjustQuantity('product3-quantity','btn-increase3', 'btn-decrease3', 'increase')"
               >
                 +
               </button>
             </div>
-            <button class="card__add-btn" id="btn-add">Добавить</button>
+            <button class="card__add-btn" id="btn-add3">Добавить</button>
           </div>
         </div>
         <div class="card">
@@ -152,13 +167,15 @@
             dolorem alias fuga?
           </p>
           <p class="card__price">
-            Стоимость: <span class="card__price--bold">1400 руб.</span>
+            Стоимость:
+            <span class="card__price--bold" id="price4">1400 руб.</span>
           </p>
           <div class="card__control">
             <div class="card__quantity">
               <button
                 class="card__quantity-btn card__decrease-btn"
-                id="btn-decrease"
+                id="btn-decrease4"
+                onclick="adjustQuantity('product4-quantity','btn-increase4', 'btn-decrease4', 'decrease')"
                 disabled
               >
                 -
@@ -170,15 +187,18 @@
                 value="1"
                 min="1"
                 max="5"
+                oninput="validateUserInput(this)"
+                onchange="notEmpty(this)"
               />
               <button
                 class="card__quantity-btn card__increase-btn"
-                id="btn-increase"
+                id="btn-increase4"
+                onclick="adjustQuantity('product4-quantity','btn-increase4', 'btn-decrease4', 'increase')"
               >
                 +
               </button>
             </div>
-            <button class="card__add-btn" id="btn-add">Добавить</button>
+            <button class="card__add-btn" id="btn-add4">Добавить</button>
           </div>
         </div>
         <div class="card">
@@ -195,13 +215,15 @@
             incidunt nemo deserunt adipisci ipsum.
           </p>
           <p class="card__price">
-            Стоимость: <span class="card__price--bold">1000 руб.</span>
+            Стоимость:
+            <span class="card__price--bold" id="price5">1000 руб.</span>
           </p>
           <div class="card__control">
             <div class="card__quantity">
               <button
                 class="card__quantity-btn card__decrease-btn"
-                id="btn-decrease"
+                id="btn-decrease5"
+                onclick="adjustQuantity('product5-quantity','btn-increase5', 'btn-decrease5', 'decrease')"
                 disabled
               >
                 -
@@ -213,15 +235,18 @@
                 value="1"
                 min="1"
                 max="5"
+                oninput="validateUserInput(this)"
+                onchange="notEmpty(this)"
               />
               <button
                 class="card__quantity-btn card__increase-btn"
-                id="btn-increase"
+                id="btn-increase5"
+                onclick="adjustQuantity('product5-quantity','btn-increase5', 'btn-decrease5', 'increase')"
               >
                 +
               </button>
             </div>
-            <button class="card__add-btn" id="btn-add">Добавить</button>
+            <button class="card__add-btn" id="btn-add5">Добавить</button>
           </div>
         </div>
         <div class="card">
@@ -238,13 +263,15 @@
             quibusdam corrupti dignissimos est.
           </p>
           <p class="card__price">
-            Стоимость: <span class="card__price--bold">2000 руб.</span>
+            Стоимость:
+            <span class="card__price--bold" id="price6">2000 руб.</span>
           </p>
           <div class="card__control">
             <div class="card__quantity">
               <button
                 class="card__quantity-btn card__decrease-btn"
-                id="btn-decrease"
+                id="btn-decrease6"
+                onclick="adjustQuantity('product6-quantity','btn-increase6', 'btn-decrease6', 'decrease')"
                 disabled
               >
                 -
@@ -256,15 +283,18 @@
                 value="1"
                 min="1"
                 max="5"
+                oninput="validateUserInput(this)"
+                onchange="notEmpty(this)"
               />
               <button
                 class="card__quantity-btn card__increase-btn"
-                id="btn-increase"
+                id="btn-increase6"
+                onclick="adjustQuantity('product6-quantity','btn-increase6', 'btn-decrease6', 'increase')"
               >
                 +
               </button>
             </div>
-            <button class="card__add-btn" id="btn-add">Добавить</button>
+            <button class="card__add-btn" id="btn-add6">Добавить</button>
           </div>
         </div>
         <div class="card">
@@ -281,13 +311,15 @@
             cupiditate amet fugiat, beatae dignissimos odio.
           </p>
           <p class="card__price">
-            Стоимость: <span class="card__price--bold">1700 руб.</span>
+            Стоимость:
+            <span class="card__price--bold" id="price7">1700 руб.</span>
           </p>
           <div class="card__control">
             <div class="card__quantity">
               <button
                 class="card__quantity-btn card__decrease-btn"
-                id="btn-decrease"
+                id="btn-decrease7"
+                onclick="adjustQuantity('product7-quantity','btn-increase7', 'btn-decrease7', 'decrease')"
                 disabled
               >
                 -
@@ -299,15 +331,18 @@
                 value="1"
                 min="1"
                 max="5"
+                oninput="validateUserInput(this)"
+                onchange="notEmpty(this)"
               />
               <button
                 class="card__quantity-btn card__increase-btn"
-                id="btn-increase"
+                id="btn-increase7"
+                onclick="adjustQuantity('product7-quantity','btn-increase7', 'btn-decrease7', 'increase')"
               >
                 +
               </button>
             </div>
-            <button class="card__add-btn" id="btn-add">Добавить</button>
+            <button class="card__add-btn" id="btn-add7">Добавить</button>
           </div>
         </div>
         <div class="card">
@@ -324,13 +359,15 @@
             debitis harum cupiditate sint eveniet.
           </p>
           <p class="card__price">
-            Стоимость: <span class="card__price--bold">3000 руб.</span>
+            Стоимость:
+            <span class="card__price--bold" id="price8">3000 руб.</span>
           </p>
           <div class="card__control">
             <div class="card__quantity">
               <button
                 class="card__quantity-btn card__decrease-btn"
-                id="btn-decrease"
+                id="btn-decrease8"
+                onclick="adjustQuantity('product8-quantity','btn-increase8', 'btn-decrease8', 'decrease')"
                 disabled
               >
                 -
@@ -342,18 +379,23 @@
                 value="1"
                 min="1"
                 max="5"
+                oninput="validateUserInput(this)"
+                onchange="notEmpty(this)"
               />
               <button
                 class="card__quantity-btn card__increase-btn"
-                id="btn-increase"
+                id="btn-increase8"
+                onclick="adjustQuantity('product8-quantity','btn-increase8', 'btn-decrease8', 'increase')"
               >
                 +
               </button>
             </div>
-            <button class="card__add-btn" id="btn-add">Добавить</button>
+            <button class="card__add-btn" id="btn-add8">Добавить</button>
           </div>
         </div>
       </div>
     </main>
+    <script src="./assets/js/funs.js"></script>
+    <!-- <script src="./assets/js/increaseDecreaseQuantity.js"></script> -->
   </body>
 </html>
