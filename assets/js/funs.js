@@ -81,7 +81,6 @@ function addPriceAmount(btn) {
   const priceStr = card.querySelector(".card__price--bold").textContent;
   const price = parseInt(priceStr.split(" ")[0]);
   totalCosts += price * value;
-  console.log(totalCosts);
 }
 
 function calculateTotalPrice() {
@@ -90,6 +89,7 @@ function calculateTotalPrice() {
   if (itemsNum === 0) {
     pasteTo.textContent = "Вы ничего не выбрали";
     pasteTo.style.color = "red";
+    return;
   }
 
   pasteTo.textContent = `Общая стоимость составляет ${
