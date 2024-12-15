@@ -8,6 +8,7 @@
 .main {
   margin: 20px auto;
   width: 90%;
+  text-align: center;
 }
 
 .title {
@@ -16,6 +17,7 @@
 }
 
 .cards {
+  margin-bottom: 100px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
@@ -87,4 +89,21 @@
   &__price--bold {
     font-weight: bold;
   }
+}
+
+.total {
+  margin-bottom: 20px;
+  width: 500px;
+  height: 70px;
+  border: none;
+  font-size: 35px;
+  background-color: black;
+  color: white;
+}
+
+.result {
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: underline;
 }

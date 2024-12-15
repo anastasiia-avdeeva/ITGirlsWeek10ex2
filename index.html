@@ -32,7 +32,7 @@
               <button
                 class="card__quantity-btn card__decrease-btn"
                 id="btn-decrease1"
-                onclick="adjustQuantity('product1-quantity','btn-increase1', 'btn-decrease1', 'decrease')"
+                onclick="adjustQuantity('product1-quantity','decrease')"
                 disabled
               >
                 -
@@ -40,21 +40,28 @@
               <input
                 type="number"
                 id="product1-quantity"
-                value="1"
-                min="1"
+                class="card__input"
+                value="0"
+                min="0"
                 max="5"
-                oninput="validateUserInput(this)"
+                oninput="adjustUserInput(this)"
                 onchange="notEmpty(this)"
               />
               <button
                 class="card__quantity-btn card__increase-btn"
                 id="btn-increase1"
-                onclick="adjustQuantity('product1-quantity','btn-increase1', 'btn-decrease1', 'increase')"
+                onclick="adjustQuantity('product1-quantity', 'increase')"
               >
                 +
               </button>
             </div>
-            <button class="card__add-btn" id="btn-add1">Добавить</button>
+            <button
+              class="card__add-btn"
+              id="btn-add1"
+              onclick="addPriceAmount(this)"
+            >
+              Добавить
+            </button>
           </div>
         </div>
         <div class="card">
@@ -79,7 +86,7 @@
               <button
                 class="card__quantity-btn card__decrease-btn"
                 id="btn-decrease2"
-                onclick="adjustQuantity('product2-quantity','btn-increase2', 'btn-decrease2', 'decrease')"
+                onclick="adjustQuantity('product2-quantity', 'decrease')"
                 disabled
               >
                 -
@@ -88,21 +95,22 @@
                 type="number"
                 name=""
                 id="product2-quantity"
-                value="1"
-                min="1"
+                class="card__input"
+                value="0"
+                min="0"
                 max="5"
-                oninput="validateUserInput(this)"
+                oninput="adjustUserInput(this)"
                 onchange="notEmpty(this)"
               />
               <button
                 class="card__quantity-btn card__increase-btn"
                 id="btn-increase2"
-                onclick="adjustQuantity('product2-quantity','btn-increase2', 'btn-decrease2', 'increase')"
+                onclick="adjustQuantity('product2-quantity','increase')"
               >
                 +
               </button>
             </div>
-            <button class="card__add-btn" id="btn-add2">Добавить</button>
+            <button class="card__add-btn" id="btn-add2 onclick="addPriceAmount(this)">Добавить</button>
           </div>
         </div>
         <div class="card">
@@ -127,7 +135,7 @@
               <button
                 class="card__quantity-btn card__decrease-btn"
                 id="btn-decrease3"
-                onclick="adjustQuantity('product3-quantity','btn-increase3', 'btn-decrease3', 'decrease')"
+                onclick="adjustQuantity('product3-quantity', 'decrease')"
                 disabled
               >
                 -
@@ -136,21 +144,22 @@
                 type="number"
                 name=""
                 id="product3-quantity"
-                value="1"
-                min="1"
+                class="card__input"
+                value="0"
+                min="0"
                 max="5"
-                oninput="validateUserInput(this)"
+                oninput="adjustUserInput(this)"
                 onchange="notEmpty(this)"
               />
               <button
                 class="card__quantity-btn card__increase-btn"
                 id="btn-increase3"
-                onclick="adjustQuantity('product3-quantity','btn-increase3', 'btn-decrease3', 'increase')"
+                onclick="adjustQuantity('product3-quantity', 'increase')"
               >
                 +
               </button>
             </div>
-            <button class="card__add-btn" id="btn-add3">Добавить</button>
+            <button class="card__add-btn" id="btn-add3" onclick="addPriceAmount(this)">Добавить</button>
           </div>
         </div>
         <div class="card">
@@ -175,7 +184,7 @@
               <button
                 class="card__quantity-btn card__decrease-btn"
                 id="btn-decrease4"
-                onclick="adjustQuantity('product4-quantity','btn-increase4', 'btn-decrease4', 'decrease')"
+                onclick="adjustQuantity('product4-quantity', 'decrease')"
                 disabled
               >
                 -
@@ -184,21 +193,22 @@
                 type="number"
                 name=""
                 id="product4-quantity"
-                value="1"
-                min="1"
+                class="card__input"
+                value="0"
+                min="0"
                 max="5"
-                oninput="validateUserInput(this)"
+                oninput="adjustUserInput(this)"
                 onchange="notEmpty(this)"
               />
               <button
                 class="card__quantity-btn card__increase-btn"
                 id="btn-increase4"
-                onclick="adjustQuantity('product4-quantity','btn-increase4', 'btn-decrease4', 'increase')"
+                onclick="adjustQuantity('product4-quantity','increase')"
               >
                 +
               </button>
             </div>
-            <button class="card__add-btn" id="btn-add4">Добавить</button>
+            <button class="card__add-btn" id="btn-add4" onclick="addPriceAmount(this)">Добавить</button>
           </div>
         </div>
         <div class="card">
@@ -223,7 +233,7 @@
               <button
                 class="card__quantity-btn card__decrease-btn"
                 id="btn-decrease5"
-                onclick="adjustQuantity('product5-quantity','btn-increase5', 'btn-decrease5', 'decrease')"
+                onclick="adjustQuantity('product5-quantity','decrease')"
                 disabled
               >
                 -
@@ -232,21 +242,22 @@
                 type="number"
                 name=""
                 id="product5-quantity"
-                value="1"
-                min="1"
+                class="card__input"
+                value="0"
+                min="0"
                 max="5"
-                oninput="validateUserInput(this)"
+                oninput="adjustUserInput(this)"
                 onchange="notEmpty(this)"
               />
               <button
                 class="card__quantity-btn card__increase-btn"
                 id="btn-increase5"
-                onclick="adjustQuantity('product5-quantity','btn-increase5', 'btn-decrease5', 'increase')"
+                onclick="adjustQuantity('product5-quantity', 'increase')"
               >
                 +
               </button>
             </div>
-            <button class="card__add-btn" id="btn-add5">Добавить</button>
+            <button class="card__add-btn" id="btn-add5" onclick="addPriceAmount(this)">Добавить</button>
           </div>
         </div>
         <div class="card">
@@ -271,7 +282,7 @@
               <button
                 class="card__quantity-btn card__decrease-btn"
                 id="btn-decrease6"
-                onclick="adjustQuantity('product6-quantity','btn-increase6', 'btn-decrease6', 'decrease')"
+                onclick="adjustQuantity('product6-quantity', 'decrease')"
                 disabled
               >
                 -
@@ -280,21 +291,22 @@
                 type="number"
                 name=""
                 id="product6-quantity"
-                value="1"
-                min="1"
+                class="card__input"
+                value="0"
+                min="0"
                 max="5"
-                oninput="validateUserInput(this)"
+                oninput="adjustUserInput(this)"
                 onchange="notEmpty(this)"
               />
               <button
                 class="card__quantity-btn card__increase-btn"
                 id="btn-increase6"
-                onclick="adjustQuantity('product6-quantity','btn-increase6', 'btn-decrease6', 'increase')"
+                onclick="adjustQuantity('product6-quantity', 'increase')"
               >
                 +
               </button>
             </div>
-            <button class="card__add-btn" id="btn-add6">Добавить</button>
+            <button class="card__add-btn" id="btn-add6" onclick="addPriceAmount(this)">Добавить</button>
           </div>
         </div>
         <div class="card">
@@ -319,7 +331,7 @@
               <button
                 class="card__quantity-btn card__decrease-btn"
                 id="btn-decrease7"
-                onclick="adjustQuantity('product7-quantity','btn-increase7', 'btn-decrease7', 'decrease')"
+                onclick="adjustQuantity('product7-quantity', 'decrease')"
                 disabled
               >
                 -
@@ -328,21 +340,22 @@
                 type="number"
                 name=""
                 id="product7-quantity"
-                value="1"
-                min="1"
+                class="card__input"
+                value="0"
+                min="0"
                 max="5"
-                oninput="validateUserInput(this)"
+                oninput="adjustUserInput(this)"
                 onchange="notEmpty(this)"
               />
               <button
                 class="card__quantity-btn card__increase-btn"
                 id="btn-increase7"
-                onclick="adjustQuantity('product7-quantity','btn-increase7', 'btn-decrease7', 'increase')"
+                onclick="adjustQuantity('product7-quantity', 'increase')"
               >
                 +
               </button>
             </div>
-            <button class="card__add-btn" id="btn-add7">Добавить</button>
+            <button class="card__add-btn" id="btn-add7" onclick="addPriceAmount(this)">Добавить</button>
           </div>
         </div>
         <div class="card">
@@ -367,7 +380,7 @@
               <button
                 class="card__quantity-btn card__decrease-btn"
                 id="btn-decrease8"
-                onclick="adjustQuantity('product8-quantity','btn-increase8', 'btn-decrease8', 'decrease')"
+                onclick="adjustQuantity('product8-quantity', 'decrease')"
                 disabled
               >
                 -
@@ -376,24 +389,29 @@
                 type="number"
                 name=""
                 id="product8-quantity"
-                value="1"
-                min="1"
+                class="card__input"
+                value="0"
+                min="0"
                 max="5"
-                oninput="validateUserInput(this)"
+                oninput="adjustUserInput(this)"
                 onchange="notEmpty(this)"
               />
               <button
                 class="card__quantity-btn card__increase-btn"
                 id="btn-increase8"
-                onclick="adjustQuantity('product8-quantity','btn-increase8', 'btn-decrease8', 'increase')"
+                onclick="adjustQuantity('product8-quantity','increase')"
               >
                 +
               </button>
             </div>
-            <button class="card__add-btn" id="btn-add8">Добавить</button>
+            <button class="card__add-btn" id="btn-add8" onclick="addPriceAmount(this)">Добавить</button>
           </div>
         </div>
       </div>
+      <button class="total" onclick="calculateTotalPrice()">
+        Посчитать итоговую сумму
+      </button>
+      <p class="result"></p>
     </main>
     <script src="./assets/js/funs.js"></script>
     <!-- <script src="./assets/js/increaseDecreaseQuantity.js"></script> -->

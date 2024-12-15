@@ -1,3 +1,6 @@
+let itemsNum = 0;
+let totalCosts = 0;
+
 const enableBtn = function (btn) {
   btn.disabled = false;
 };
@@ -6,27 +9,30 @@ const disableBtn = function (btn) {
   btn.disabled = true;
 };
 
-const controlBtnsState = (input, decreaseBtn, increaseBtn) => {
+const controlBtnsState = (input) => {
+  const card = input.closest(".card");
+  const decreaseBtn = card.querySelector(".card__decrease-btn");
+  const increaseBtn = card.querySelector(".card__increase-btn");
   const value = parseInt(input.value);
+  const min = parseInt(input.min);
+  const max = parseInt(input.max);
 
   //control state of decrease button
-  if (value > 1) {
+  if (value > min) {
     enableBtn(decreaseBtn);
-  } else if (value === 1) {
+  } else if (value === min) {
     disableBtn(decreaseBtn);
   }
   //control state of increase button
-  if (value === 5) {
+  if (value === max) {
     disableBtn(increaseBtn);
-  } else if (value < 5) {
+  } else if (value < max) {
     enableBtn(increaseBtn);
   }
 };
 
-const adjustQuantity = (inputId, increaseBtnId, decreaseBtnId, action) => {
+const adjustQuantity = (inputId, action) => {
   const input = document.getElementById(inputId);
-  const increaseBtn = document.getElementById(increaseBtnId);
-  const decreaseBtn = document.getElementById(decreaseBtnId);
   const value = parseInt(input.value);
 
   if (action === "increase") {
@@ -35,10 +41,10 @@ const adjustQuantity = (inputId, increaseBtnId, decreaseBtnId, action) => {
     input.value = value - 1;
   }
 
-  controlBtnsState(input, decreaseBtn, increaseBtn);
+  controlBtnsState(input);
 };
 
-function validateUserInput(input) {
+function adjustUserInput(input) {
   const min = parseInt(input.min);
   const max = parseInt(input.max);
   let value = input.value;
@@ -52,21 +58,43 @@ function validateUserInput(input) {
     input.value = max;
   }
 
-  const card = input.closest(".card");
-  const decreaseBtn = card.querySelector(".card__decrease-btn");
-  const increaseBtn = card.querySelector(".card__increase-btn");
-
-  controlBtnsState(input, decreaseBtn, increaseBtn);
+  controlBtnsState(input);
 }
 
 function notEmpty(input) {
   const value = input.value;
-  const card = input.closest(".card");
-  const decreaseBtn = card.querySelector(".card__decrease-btn");
-  const increaseBtn = card.querySelector(".card__increase-btn");
+  const min = parseInt(input.min);
 
   if (value === "") {
-    input.value = 1;
+    input.value = min;
   }
-  controlBtnsState(input, decreaseBtn, increaseBtn);
+
+  controlBtnsState(input);
 }
+
+function addPriceAmount(btn) {
+  const card = btn.closest(".card");
+  const input = card.querySelector(".card__input");
+  const value = input.value;
+
+  itemsNum += parseInt(value);
+
+  const priceStr = card.querySelector(".card__price--bold").textContent;
+  const price = parseInt(priceStr.split(" ")[0]);
+  totalCosts += price * itemsNum;
+}
+
+function calculateTotalPrice() {
+  const pasteTo = document.querySelector(".result");
+
+  if (itemsNum === 0) {
+    pasteTo.textContent = "Вы ничего не выбрали";
+    pasteTo.style.color = "red";
+  }
+
+  pasteTo.textContent = `Общая стоимость составляет ${
+    totalCosts.toLocaleString("ru-RU")
+  } рублей`;
+}
+
+// toLocaleString('ru-RU')
