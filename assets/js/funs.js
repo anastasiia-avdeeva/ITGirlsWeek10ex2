@@ -78,10 +78,10 @@ function addPriceAmount(btn) {
   const value = input.value;
 
   itemsNum += parseInt(value);
-
   const priceStr = card.querySelector(".card__price--bold").textContent;
   const price = parseInt(priceStr.split(" ")[0]);
-  totalCosts += price * itemsNum;
+  totalCosts += price * value;
+  console.log(totalCosts);
 }
 
 function calculateTotalPrice() {
@@ -94,7 +94,5 @@ function calculateTotalPrice() {
 
   pasteTo.textContent = `Общая стоимость составляет ${
     totalCosts.toLocaleString("ru-RU")
-  } рублей`;
+  } рублей. Количество единиц товара: ${itemsNum}.`;
 }
-
-// toLocaleString('ru-RU')
